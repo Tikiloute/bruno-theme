@@ -46,6 +46,7 @@ body {
   color: white;
   cursor: pointer;
   display: none;
+  margin-left: auto; /* pousse le bouton à droite */
 }
 
 /* Menu */
@@ -71,6 +72,44 @@ body {
 .menu li a:focus {
   color: #0091ff;
 }
+
+.site-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement tous les enfants */
+  flex-shrink: 1; /* permet de réduire si besoin */
+  min-width: 0; /* évite débordement */
+}
+
+.site-identity {
+  margin-top: 3px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+/* Masquer sur mobile */
+@media (max-width: 768px) {
+
+  .site-branding {
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .site-identity {
+    display: none;
+  }
+
+   .site-header {
+    flex-wrap: nowrap; /* empêche le passage à la ligne */
+    justify-content: space-between; /* garde l’espace entre logo et menu */
+    align-items: center; /* bien aligner verticalement */
+  }
+}
+
 
 /* Footer */
 .site-footer {
@@ -105,5 +144,34 @@ body {
 
   .menu.show {
     display: flex;
+  }
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #0074bc;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #0091ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .site-footer p {
+    margin-bottom: 10px;
   }
 }

@@ -8,12 +8,14 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="site-header">
-  <div class="site-logo">
-    <a href="<?php echo home_url(); ?>">
+
+  <div class="site-branding">
+    <a href="<?php echo home_url(); ?>" class="site-logo">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-blanc.png" alt="Logo">
     </a>
+    <p class="site-identity">Bruno Etcheverry – Conseiller immobilier indépendant, affilié IAD France</p>
   </div>
-  
+    
   <nav class="site-nav" role="navigation" aria-label="Menu principal">
     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
     <?php wp_nav_menu(array(
