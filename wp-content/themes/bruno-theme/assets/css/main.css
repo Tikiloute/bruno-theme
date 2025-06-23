@@ -7,7 +7,7 @@
 
 /* Corps */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   background-color: #fff;
   color: #2c2c2c;
   line-height: 1.5;
@@ -19,6 +19,30 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bordered {
+  max-width: 960px;
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .bordered {
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+  }
+}
+
 
 /* Header */
 .site-header {
@@ -94,6 +118,107 @@ body {
   text-decoration: underline; /* ou souligné */
   cursor: default;     /* curseur normal (pas la main) */
   pointer-events: none; /* désactive le clic */
+}
+
+/* Accueil sidebar et photo */
+.hero {
+  background-color: #F5F5F5;
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  object-fit: cover;
+  border: 4px solid #0072CE;
+}
+.hero h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #0072CE;
+  margin-bottom: 0.4em;
+}
+.hero p {
+  color: #666;
+  font-size: 18px;
+  margin-top: 0.4em;
+}
+.homepage-content.content-wrapper.bordered {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  box-sizing: border-box;
+   overflow: hidden;
+}
+
+.homepage-content .elementor-section {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Ce sélecteur cible le conteneur des sections (photo + Elementor) */
+.homepage-content.content-wrapper.bordered {
+  display: flex;
+  flex-direction:row; /* Force empilement vertical */
+  gap: 40px; /* Espace entre les blocs */
+}
+
+/* Responsive sidebar accueil */
+@media screen and (max-width: 768px) {
+  .homepage-content.content-wrapper.bordered {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; 
+    border-left: none;
+    border-right: none;
+  }
+
+  .hero, .hero-inner {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .elementor-widget-heading h1 {
+    margin-bottom: 1em !important;
+    }
+
+    .hero .elementor-widget-text-editor p {
+    margin-top: 1em !important;
+    }
+
+   .homepage-content p:first-of-type {
+    margin-top: 0 !important;
+  }
+
+   .elementor-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
 }
 
 /* Masquer sur mobile */
