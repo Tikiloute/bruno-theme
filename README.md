@@ -1,0 +1,2 @@
+# bruno-theme
+wordpress theme
