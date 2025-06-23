@@ -1,0 +1,15 @@
+# Ignore WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-content/plugins/
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/languages/
+
+# Ignore IDE files
+.vscode/
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
