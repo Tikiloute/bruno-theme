@@ -1,15 +1,17 @@
-# Ignore WordPress core files
-/wp-admin/
-/wp-includes/
-/wp-content/plugins/
-/wp-content/uploads/
-/wp-content/cache/
-/wp-content/languages/
-
-# Ignore IDE files
+# Ignorer fichiers temporaires IDE
 .vscode/
-*.log
+.idea/
 
-# Ignore system files
+# Ignorer fichiers système
 .DS_Store
 Thumbs.db
+
+# Ignorer cache et logs
+wp-content/cache/
+wp-content/uploads/cache/
+wp-content/litespeed/
+
+# Ignorer fichiers sensibles ou personnels (si tu en as)
+wp-config-local.php
+.env
+

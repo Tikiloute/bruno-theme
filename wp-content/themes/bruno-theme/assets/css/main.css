@@ -1,8 +1,109 @@
-/*
-Theme Name: Bruno Theme
-Theme URI: https://bruno-theme.local/
-Author: Bruno
-Author URI: https://bruno-theme.local/
-Description: Thème WordPress personnalisé pour Bruno, conseiller immobilier IAD
-Version: 1.0
-*/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+/* Conteneur */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.site-header {
+  background-color: #0074bc;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-logo img {
+  height: 50px;
+}
+
+/* Navigation */
+.site-nav {
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: #0091ff;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #0074bc;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+
+  .menu li {
+    padding: 10px 15px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+}
