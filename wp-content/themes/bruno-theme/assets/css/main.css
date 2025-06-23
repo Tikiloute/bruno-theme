@@ -70,7 +70,7 @@ body {
 
 .menu li a:hover,
 .menu li a:focus {
-  color: #0091ff;
+  color: #00d9ff;
 }
 
 .site-branding {
@@ -87,6 +87,13 @@ body {
   font-size: 0.85rem;
   color: white;
   transition: opacity 0.3s ease;
+}
+
+.menu li.current-menu-item > a {
+  color: #00d9ff;      /* couleur différente, ici un bleu plus vif */
+  text-decoration: underline; /* ou souligné */
+  cursor: default;     /* curseur normal (pas la main) */
+  pointer-events: none; /* désactive le clic */
 }
 
 /* Masquer sur mobile */
@@ -166,7 +173,7 @@ body {
 
 .site-footer a:hover,
 .site-footer a:focus {
-  color: #0091ff;
+  color: #00d9ff;
   text-decoration: underline;
 }
 
