@@ -35,7 +35,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 964px) {
   .bordered {
     border-left: none;
     border-right: none;
@@ -131,12 +131,14 @@ body {
   margin: 0 auto;
 }
 .hero-photo {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 100px;
   object-fit: cover;
   border: 4px solid #0072CE;
+  box-shadow: 10px 5px 5px rgb(13, 0, 68) !important;
 }
+
 .hero h1 {
   margin-top: 20px;
   font-size: 24px;
@@ -146,8 +148,9 @@ body {
 .hero p {
   color: #666;
   font-size: 18px;
-  margin-top: 0.4em;
+  margin-top: 30px;
 }
+
 .homepage-content.content-wrapper.bordered {
   max-width: 960px;
   margin: 40px auto;
@@ -174,8 +177,34 @@ body {
   gap: 40px; /* Espace entre les blocs */
 }
 
+/* sidebar de l'accueil partie tél et mail*/
+.hero-contact {
+  margin-top: 30px; /* ↑ valeur augmentée pour plus d'espacement */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-link {
+  display: inline-block;
+  color: #005288; /* Bleu IAD renforcé */
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap; /* évite les retours à la ligne */
+}
+
+.contact-link strong {
+  font-weight: 700;
+}
+
+.contact-link:hover {
+  color: #003d66;
+  text-decoration: underline;
+}
+
 /* Responsive sidebar accueil */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 964px) {
   .homepage-content.content-wrapper.bordered {
     flex-direction: column;
     gap: 20px;
@@ -190,8 +219,8 @@ body {
   }
 
   .hero-photo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
 
@@ -222,7 +251,7 @@ body {
 }
 
 /* Masquer sur mobile */
-@media (max-width: 768px) {
+@media (max-width: 964px) {
 
   .site-branding {
     align-items: flex-start;
@@ -253,7 +282,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 964px) {
   .menu-toggle {
     display: block;
   }
@@ -302,7 +331,7 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 964px) {
   .site-footer p {
     margin-bottom: 10px;
   }
